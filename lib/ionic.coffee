@@ -53,6 +53,7 @@ module.exports =
       http.get(uri.format(), ->
         preview.go()
         atom.workspace.activateNextPane()
+        preview.focus()
       ).on('error', ->
         atom.workspace.destroyActivePaneItem()
         alert("You have to start the ionic server first!")
